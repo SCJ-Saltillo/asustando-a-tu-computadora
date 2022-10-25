@@ -30,7 +30,7 @@ function preload() {
     location.reload();
   }
   
-  imageModelURL = prompt('Pega aquí el enlace a tu modelo');
+  imageModelURL = prompt('Pega aquí el enlace a tu modelo. Si no tienes uno, deja esto en blanco.');
 
   if(imageModelURL)
     imageModelURL += "model.json";
@@ -67,7 +67,7 @@ function setup() {
     document.getElementById("container").innerHTML = "";    
     
     loading = true;
-    
+
     // Read file as image
     let image = event.target.files[0];
     readImage(image);
@@ -131,13 +131,14 @@ function displayDummyText(){
   
   if (textSize_ < 1)
     textSize_ = 1;
+  else if(textSize_ > 5)
+    textSize_= 5;
     
   textSize(textSize_);
   
   textAlign(CENTER);
   
   let middle = window.visualViewport.pageLeft + window.visualViewport.width/2;
-  
 
   text("La Casa Decorada: una escalofriante leyenda de Halloween", middle, 10);
   text("Nuestras primeras protagonistas fueron dos amigas de instituto que", middle, 13);
