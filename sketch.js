@@ -49,8 +49,8 @@ function preload() {
   else
     triedLoadingModel = false;
   
-  loadAnim = loadImage('loading.gif');
-  jumpSound = loadSound('jumpSound.mp3');
+  loadAnim = loadImage('media/loading.gif');
+  jumpSound = loadSound('media/jumpSound.mp3');
   
 }
 
