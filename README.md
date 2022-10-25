@@ -11,6 +11,13 @@ El proyecto consiste en un pequeño juego en el que el usuario:
 3. Tras subir la foto, aparecerá un texto muy pequeño. Se debe pedir a alguien más que intente leerlo.
 4. Una vez que la otra persona se acerque, se reproducirá un jumpscare con la imagen subida y un sonido por defecto.
 
+<p text-align="center"> Juega ahora mismo <a href="https://scj-saltillo.github.io/asustando-a-tu-computadora/">aquí!</a> </p>
+
+> **Actualización @ 24/10/2022**
+
+Se modificó el funcionamiento del demo para que cuando la persona a engañar intente hacer zoom en la pantalla el texto este se vuelva más chico, provocando así que se vea forzado a acercarse a la pantalla.
+
+
 <!-- Documentation in English, to whomever outside our dissemination group may interest: -->
 <br>
 
@@ -24,3 +31,9 @@ The project consists of a small game in which the user:
 2. A photograph is taken/ uploaded that may cause fear.
 3. After uploading the photo, a very small text will appear. Someone else should be asked to try to read it.
 4. Once the other person approaches, a jumpscare will be played with the uploaded image and a default sound.
+
+<p text-align="center"> Play right now clicking <a href="https://scj-saltillo.github.io/asustando-a-tu-computadora/">here!</a> </p>
+
+> **Update @ 10.24.2022**
+
+The demo's functioning has been modified so that when the user tries to zoom on the screen the dummy text becomes smaller, and, thus, the user to be pranked will be forced to get closer to the screen.

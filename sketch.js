@@ -49,8 +49,8 @@ function preload() {
   else
     triedLoadingModel = false;
   
-  loadAnim = loadImage('asustando-a-tu-computadora/media/loading.gif');
-  jumpSound = loadSound('asustando-a-tu-computadora/media/jumpSound.mp3');
+  loadAnim = loadImage('media/loading.gif');
+  jumpSound = loadSound('media/jumpSound.mp3');
   
 }
 
@@ -104,7 +104,11 @@ function draw() {
 
 function playJumpscare(){
   
-  image(selectedImg, 0, 0, displayWidth, displayHeight);
+  image(selectedImg,
+        window.visualViewport.pageLeft,
+        window.visualViewport.pageTop,
+        window.visualViewport.width,
+        window.visualViewport.height);
   
   if(!jumpSoundPlayed){
     jumpSound.play();
@@ -118,8 +122,23 @@ function displayDummyText(){
   background(245,187,12);
   fill('black');
   
-  let middle = displayWidth/2;
+  // Compensate user zoom by making text smaller.
+  let zoom = window.visualViewport.scale; 
+  let zoomDiff = 1 - zoom;
+  let zoomFactor = 1 + zoomDiff
   
+  let textSize_ = 4 * (zoomFactor);
+  
+  if (textSize_ < 1)
+    textSize_ = 1;
+    
+  textSize(textSize_);
+  
+  textAlign(CENTER);
+  
+  let middle = window.visualViewport.pageLeft + window.visualViewport.width/2;
+  
+
   text("La Casa Decorada: una escalofriante leyenda de Halloween", middle, 10);
   text("Nuestras primeras protagonistas fueron dos amigas de instituto que", middle, 13);
   text("acabaron convertidas en rivales en la peor de las noches, la de", middle, 16);
