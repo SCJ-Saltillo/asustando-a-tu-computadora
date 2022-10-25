@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+    @font-face{
+      
+      font-family: "Halloween";
+      src: url('media/Halloween.ttf');
+      src: local("Halloween"), url('media/Halloween.ttf');
+      
+    }
+    
+    .title{
+      font-family: 'Halloween';
+      font-size: 25px;
+      color: rgb(0,0,0);
+    }
+    
+    .text{
+      font-family: 'Righteous', sans-serif;
+      font-size: 16px;
+      text-align: left;
+    }
+    
+    .background{
+      background-image: url('media/bg.jpg');
+      background-size: cover;
+      background-repeat: repeat;
+    }
